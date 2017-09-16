@@ -33,7 +33,7 @@ int main()
 
 void Intro()
 {
-	std::cout << "Welcome to Bulls and Cows\n";
+	std::cout << "Welcome to Bilbo baggin's little adventure\n";
 	std::cout << "Type in ""HELP"" for some useful info\n\n";
 	SetDifficulty();
 	std::cout << "You have " << BCGame.GetMaxTries() << " Tries\n";
