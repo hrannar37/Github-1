@@ -1,6 +1,8 @@
 #pragma once
 #include "stdafx.h"
 #include "Fbullcowgame.h"
+#include <stdlib.h>
+#include <time.h> 
 #include <map>
 #define Tmap std::map
 
@@ -24,8 +26,19 @@ void Fbullcowgame::Reset()
 //Sets the hidden word according to the players Decision
 void Fbullcowgame::SetHiddenWord(int32 X)
 {
-	Tmap<int32, FString> WordLibrary{ {3, "ant"}, { 4,"lard" }, { 5,"fired" }, { 6,"stupid" }, { 7,"dormant" } };
-	MyHiddenWord = WordLibrary[X];
+	srand(time(NULL));
+	int32 RandomWord;
+	RandomWord = rand() % 10 + 1;
+	Tmap<int32, FString> WordLibrary3{ {1,"ant"}, {2,"bad"}, {3,"cat"}, {4,"sad"}, {5,"zit"}, {6,"but"}, {7,"tar"}, {8,"mit"}, {9,"bot"}, {10,"ark"} };
+	Tmap<int32, FString> WordLibrary4{ {1,"slow"}, {2,"four" }, {3,"more"}, {4,"fire"}, {5,"rock"}, {6,"lake"}, {7,"dick"}, {8,"goal"}, {9,"rose"}, {10,"mole"} };
+	Tmap<int32, FString> WordLibrary5{ {1,"fired" }, { 2,"slave" },{ 3,"child" },{ 4,"flake" },{ 5,"takes" },{ 6,"right" },{ 7,"spike" },{ 8,"scope" },{ 9,"brick" },{ 10,"jumpy" } };
+	Tmap<int32, FString> WordLibrary6{ {1,"stupid" }, { 2,"longer" },{ 3,"sniper" },{ 4,"drying" },{ 5,"dwarfs" },{ 6,"kinder" },{ 7,"tinder" },{ 8,"boxing" },{ 9,"fumbly" },{ 10,"shrimp" } };
+	Tmap<int32, FString> WordLibrary7{ {1,"dormant" }, { 2,"thwacks" },{ 3,"stumped" },{ 4,"ducking" },{ 5,"raunchy" },{ 6,"company" },{ 7,"keramic" },{ 8,"quacked" },{ 9,"zephyrs" },{ 10,"zombies" } };
+	if (X == 3) { MyHiddenWord = WordLibrary3[RandomWord]; }
+	else if (X == 4) { MyHiddenWord = WordLibrary4[RandomWord]; }
+	else if (X == 5) { MyHiddenWord = WordLibrary5[RandomWord]; }
+	else if (X == 6) { MyHiddenWord = WordLibrary6[RandomWord]; }
+	else if (X == 7) { MyHiddenWord = WordLibrary7[RandomWord]; }
 	return;
 }
 

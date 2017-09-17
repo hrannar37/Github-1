@@ -2,8 +2,6 @@
 #include "stdafx.h"
 #include "Fbullcowgame.h"
 
-
-//Test for sourcetree
 using FText = std::string;
 using int32 = int;
 
@@ -33,7 +31,7 @@ int main()
 
 void Intro()
 {
-	std::cout << "Welcome to Bilbo baggin's little adventure\n";
+	std::cout << "Welcome to Bulls and Cows\n";
 	std::cout << "Type in ""HELP"" for some useful info\n\n";
 	SetDifficulty();
 	std::cout << "You have " << BCGame.GetMaxTries() << " Tries\n";
